@@ -4,12 +4,12 @@ function displayWordSoFar(word, guesses) {
   let isGuessed = false;
   for (let i = 0; i < word.length; i++) {
     for (let j = 0; j < guesses.length; j++) {
-      if (word[i] == guesses[j]) {
+      if (word[i] === guesses[j]) {
         guessedWord = guessedWord + guesses[j]
         isGuessed = true
       }
     }
-    if (isGuessed == false) {
+    if (isGuessed === false) {
       guessedWord = guessedWord + "_"
     }
     isGuessed = false
@@ -20,7 +20,7 @@ function displayWordSoFar(word, guesses) {
 
 function isGameWon(word, guesses) {
   let hasWon = false
-  if (word == displayWordSoFar(word, guesses)) {
+  if (word === displayWordSoFar(word, guesses)) {
     hasWon = true
   }
   return hasWon

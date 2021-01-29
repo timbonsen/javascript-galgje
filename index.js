@@ -5,7 +5,7 @@ function game(word, guesses) {
   console.log("Deze letters heb je tot nu toe geraden: ", guesses);
   console.log(displayWordSoFar(word, guesses))
 
-  const letter = question("Raad een letter: ");
+  const letter = question("Raad een letter: ").toLowerCase();
   const wordToArray = word.split("");
 
   // voeg de geraden letter toe aan de array met guesses
